@@ -14,15 +14,38 @@ import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query MyQueryAndSiteTitleQuery {
+      allProject {
+        edges {
+          node {
+            id
+            name
+            url
+            repo
+            build
+            description
+          }
+        }
+      },
       site {
         siteMetadata {
           title
         }
       }
     }
-  `)
-
+  `);
+  const { allProject: { edges } } = data;
+  const nodes = edges.map(node => {
+    const { node: { name, url, id, description, repo, build } } = node;
+    return (
+      <ul key={id}>
+        <li>{name}</li>
+        <li>{url}</li>
+        <li>repo: {repo}</li>
+        <li>{description}</li>
+      </ul>
+    )
+  });
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
@@ -33,7 +56,10 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main>{children}</main>
+        <main>
+          {children}
+          {nodes}
+        </main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
