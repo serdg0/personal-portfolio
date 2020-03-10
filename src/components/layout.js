@@ -8,62 +8,37 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
+import Typical from 'react-typical';
+import Projects from './projects'
+import Nav from './nav'
 import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query MyQueryAndSiteTitleQuery {
-      allProject {
-        edges {
-          node {
-            id
-            name
-            url
-            repo
-            build
-            description
-          }
-        }
-      },
+    query SiteTitleQuery {
       site {
         siteMetadata {
           title
+          description
         }
       }
     }
   `);
-  const { allProject: { edges } } = data;
-  const nodes = edges.map(node => {
-    const { node: { name, url, id, description, repo, build } } = node;
-    return (
-      <ul key={id}>
-        <li>{name}</li>
-        <li>{url}</li>
-        <li>repo: {repo}</li>
-        <li>{description}</li>
-      </ul>
-    )
-  });
+  const { site: { siteMetadata: { title, description } } } = data;
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <Nav />
+      <div className="container">
         <main>
           {children}
-          {nodes}
+          <h1><Typical loop={1} steps={[title, 5000]} /></h1>
+          <p>{description}</p>
+          <Projects />
         </main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
+        <footer id='contact'>
+          © {new Date().getFullYear()}, Built by
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://twitter.com/thesergiod">Sergio Diaz</a>
         </footer>
       </div>
     </>
