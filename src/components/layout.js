@@ -1,17 +1,12 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Typical from 'react-typical';
 import Projects from './projects'
 import Nav from './nav'
-import "./layout.css"
+import Contact from './contact';
+import "./layout.css";
+import PortfolioHeader from "./portfoliotitle";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -33,13 +28,10 @@ const Layout = ({ children }) => {
           {children}
           <h1><Typical loop={1} steps={[title, 5000]} /></h1>
           <p>{description}</p>
+          <PortfolioHeader />
           <Projects />
         </main>
-        <footer id='contact'>
-          © {new Date().getFullYear()}, Built by
-          {` `}
-          <a href="https://twitter.com/thesergiod">Sergio Diaz</a>
-        </footer>
+        <Contact />
       </div>
     </>
   )
