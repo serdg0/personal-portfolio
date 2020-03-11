@@ -3,7 +3,7 @@ import React from 'react';
 const PortfolioHeader = () => {
     return(
         <div id="portfolio" className="d-flex justify-content-center">
-            <h2>Portfolio</h2>
+            <h2 className="main-color">PORTFOLIO</h2>
         </div>
     )
 }

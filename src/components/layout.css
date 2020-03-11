@@ -2,9 +2,10 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
+} /* #2e86de, #0abde3*/
 body {
   margin: 0;
+  background-image: linear-gradient(to bottom, #5CDB95, #8EE4AF);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -619,4 +620,38 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+@font-face {
+  font-family: 'pixel';
+  src: url('../../static/OverpassMono-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'texto';
+  src: url('../../static/Roboto-Medium.ttf');
+}
+
+.project {
+  /*box-shadow: 0 7px 16px 0 rgba(0,0,0,0.05);*/
+  background-color: #379683 !important;
+}
+
+.main-color {
+  font-family: pixel !important;
+  color: #EDF5E1;
+}
+
+.subheader {
+  font-family: pixel;
+}
+
+.text-color {
+  font-family: texto;
+  color: #05386B;
+}
+
+.tag {
+  background-color: #05386B !important;
+  color: #EDF5E1 !important;
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Tags = ({ build }) => {
-    const buttons = build.map(link => <button type="button" className="btn btn-outline-success">{link}</button>)
+    const buttons = build.map(link => <span className="badge badge-secondary mr-2 mb-2 tag">{link}</span>)
     return (
-        <div className="d-flex justify-content-between">
+        <div className="d-flex flex-wrap justify-content-start">
             {buttons}
         </div>
     )
