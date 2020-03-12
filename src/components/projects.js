@@ -2,9 +2,9 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Fade from 'react-reveal/Fade';
 import Tags from './tags';
-import Display from './imageDisplay';
-import Github from '../../static/icons8-github-50.png';
+import Github from '../../static/github.png';
 import Live from '../../static/icons8-youtube-live-48.png';
+import BackgroundImageSection from './backgrounds';
 
 const Projects = () => {
     const data = useStaticQuery(graphql`
@@ -24,21 +24,15 @@ const Projects = () => {
         }
       }
   `);
-/*
-  const height = window.innerHeight * 0.75;
-  const size = {
-    height,
-  } */
   const { allProject: { edges } } = data;
-  
   const cards = edges.map(node => {
     const { node: { name, url, id, description, repo, build, imgName } } = node;
     return (
       <Fade bottom>
-        <div key={id} className="card mb-3 project ">
+        <div key={id} className="card mb-4 project h-50">
           <div className="row no-gutters">
             <div className="col-md-4">
-              <Display path={imgName} />
+              <BackgroundImageSection imgName={imgName} />
             </div>
             <div className="col-md-8">
               <div className="card-body">

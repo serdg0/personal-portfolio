@@ -6,7 +6,7 @@ import Nav from './nav'
 import Cover from './cover';
 import Contact from './contact';
 import "./layout.css";
-import PortfolioHeader from "./portfoliotitle";
+import SubHeader from "./subheader";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -20,16 +20,18 @@ const Layout = ({ children }) => {
     }
   `);
   const { site: { siteMetadata: { title, description } } } = data;
+
   return (
     <>
       <Nav />
       <div className="container">
         <main title="cover">
           <Cover children={children} title={title} description={description} />
-          <PortfolioHeader title="portfolio" />
+          <SubHeader title="portfolio" />
           <Projects />
         </main>
-        <Contact title="contact" />
+        <SubHeader title="contact" />
+        <Contact />
       </div>
     </>
   )
