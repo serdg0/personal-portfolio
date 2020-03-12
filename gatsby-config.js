@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Sergio Diaz`,
-    description: `Hi, I’m Sergio, I’m in a coding Bootcamp and aspire to pursue my software developer career in a big tech company where I can demonstrate my skills and develop my potential, which I’m currently searching for.`,
+    description: `Hi, my name is Sergio, and I'm a web developer from a remote web development program. Currently looking for opportunities, to prove my skills and develop my potential.`,
     author: `@gatsbyjs`,
   },
   plugins: [

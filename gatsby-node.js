@@ -7,6 +7,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             repo: 'https://github.com/serdg0/timelogger',
             build: ['Javascript', 'Ruby', 'npm', 'React', 'Redux', 'Ruby on Rails', 'Heroku'],
             description: 'TimeLogger was my final project in the curriculum. Its fed by an api made in Ruby on Rails. I took the chance to build using other libraries like lodash and react-router',
+            imgName: 'timelogger.png',
         },
         {
             name: 'Bookstore CMS',
@@ -14,6 +15,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             repo: 'https://github.com/serdg0/bookstore',
             build: ['Javascript', 'npm', 'React', 'Redux', 'Heroku'],
             description: 'In this projects I had the chance to learn Redux for the first time. Also based my the UI on a given design',
+            imgName: 'bookstore.png',
         },
         {
             name: 'Calculator',
@@ -21,6 +23,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             repo: 'https://github.com/serdg0/React-Calculator',
             build: ['Javascript', 'npm', 'React', 'Heroku'],
             description: 'A calculator build using React components',
+            imgName: 'calculator.png',
         },
         {
             name: 'Battleship',
@@ -28,6 +31,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             repo: 'https://github.com/serdg0/battleship',
             build: ['Javascript', 'Webpack', 'Pair Programming'],
             description: "A browser-based battleship game built with Javascript, applying it's best practices",
+            imgName: 'battleship.png',
         },
         {
             name: 'Tic Tac Toe',
@@ -35,6 +39,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             repo: 'https://github.com/eapenzacharias/TicTacToe-JS',
             build: ['Javascript', 'Webpack', 'Pair Programming'],
             description: 'A browser-based tic-tac-toe game',
+            imgName: 'tictactoe.png',
         },
         {
             name: 'Socialbook',
@@ -42,6 +47,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             repo: 'https://github.com/MephistoDevelop/SocialBook',
             build: ['Ruby', 'Ruby on Rails', 'Pair Programming', 'Heroku'],
             description: 'A social platform based on facebook, using ruby on rails. Remember to confirm your email!',
+            imgName: 'socialbook.png',
         },
         {
             name: 'Newsweek Design',
@@ -49,6 +55,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             repo: 'https://github.com/serdg0/Newsweek-design',
             build: ['HTML', 'CSS', 'Bootstrap'],
             description: 'A project based on the official newsweek layout design using bootstrap',
+            imgName: 'newsweek.png',
         },
     ]
 
@@ -59,6 +66,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             repo: project.repo,
             build: project.build,
             description: project.description,
+            imgName: project.imgName,
             id: createNodeId(`Project-${project.name}`),
             internal: {
                 type: 'Project',

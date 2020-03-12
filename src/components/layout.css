@@ -5,7 +5,7 @@ html {
 } /* #2e86de, #0abde3*/
 body {
   margin: 0;
-  background-image: linear-gradient(to bottom, #5CDB95, #8EE4AF);
+  background-image: linear-gradient(to bottom, #5CDB95);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -641,7 +641,7 @@ pre tt:after {
   font-family: pixel !important;
   color: #EDF5E1;
 }
-
+/*#8EE4AF */
 .subheader {
   font-family: pixel;
 }
