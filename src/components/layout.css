@@ -638,6 +638,10 @@ pre tt:after {
   background-color: #379683 !important;
 }
 
+.cover-title {
+  font-size: 4rem !important;
+}
+
 .main-color {
   font-family: pixel !important;
   color: #EDF5E1;

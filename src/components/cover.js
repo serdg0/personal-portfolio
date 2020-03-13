@@ -4,10 +4,6 @@ import Slides from './coveranimation';
 import Media from 'react-media';
 
 const Cover = ({ children, title, description }) => {
-    const fontSize = {
-        fontSize: '5rem',
-    }
-
     return (
         <div style={{height: '100vh'}} id="up">
             {children}
@@ -17,7 +13,7 @@ const Cover = ({ children, title, description }) => {
                         matches.small ? (
                             <h1><Typical className="main-color mb-5 mt-5" loop={1} steps={[title, 5000]} /></h1>
                         ) : (
-                            <h1 className="main-color mb-5 mt-5" style={fontSize}><Typical loop={1} steps={['> ' + title, 5000]} /></h1>
+                            <h1 className="cover-title"><Typical className="main-color mb-5 mt-5" loop={1} steps={['> ' + title, 5000]} /></h1>
                             )
                     }
                 </Media>
