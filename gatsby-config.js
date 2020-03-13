@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/personal-portfolio",
   siteMetadata: {
     title: `Sergio Diaz`,
     description: `Hi, my name is Sergio, and I'm a web developer from a remote web development program. Currently looking for opportunities, to prove my skills and develop my potential.`,

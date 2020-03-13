@@ -1,43 +1,34 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { shuffle } from "lodash";
-import Ruby from '../../static/ruby.png'
-import Javascript from '../../static/js.png'
-import Raect from '../../static/react.png'
-import Css from '../../static/css.png'
-import Html from '../../static/html.png'
-import Redux from '../../static/redux.png'
-
-const spring = {
-  type: "spring",
-  damping: 70,
-  stiffness: 20
-};
-
-const initialColors = [Ruby, Javascript, Raect, Redux, Css, Html];
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from "gatsby-image"
 
 const Slides = () => {
-  const [colors, setColors] = useState(initialColors);
-
-  useEffect(() => {
-    setTimeout(() => setColors(shuffle(colors)),1500);
-  }, [colors]);
+  const data = useStaticQuery(graphql`
+    query Icons {
+      allFile(filter: {relativeDirectory: {eq: "icons"}}) {
+        edges {
+          node {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  const { allFile: { edges } } = data;
+  const icons = edges.map(icon => {
+    const { node: { childImageSharp: { id, fluid } } } = icon;
+    return <Img key={id} fluid={fluid} className="mr-2" style={{height: '50px', width: '50px'}} />
+  })
 
   return (
-    <div className="d-flex justify-content-end mt-5">
-      {colors.map(background => (
-        <motion.img
-          className="mr-2"
-          src={background}
-          key={background}
-          layoutTransition={spring}
-          style={{ background }}
-        />
-      ))}
+    <div className="d-flex justify-content-end mt-5 mb-5">
+      {icons}
     </div>
   );
 };
-
 
 export default Slides;

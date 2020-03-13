@@ -2,7 +2,8 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-} /* #2e86de, #0abde3*/
+}
+
 body {
   margin: 0;
   background-image: linear-gradient(to bottom, #5CDB95);

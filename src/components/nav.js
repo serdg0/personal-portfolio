@@ -5,9 +5,13 @@ import { motion } from 'framer-motion';
 const Nav = () => {
     const links = ['portfolio', 'contact', 'up'];
     const aniNav = {
-        color: '#EDF5E1'
+        color: '#EDF5E1',
+        scale: '1.01',
     }
-    const navLinks = links.map(link => <motion.li className='nav-item text-color' whileHover={aniNav}><Link to={link} spy={true} smooth={true} duration={1500} className='nav-link'>{link.toUpperCase()}</Link></motion.li> )
+    const tap = {
+        scale: '0.9'
+    }
+    const navLinks = links.map(link => <motion.li className='nav-item text-color' whileTap={tap} whileHover={aniNav}><Link to={link} spy={true} smooth={true} duration={1500} className='nav-link'>{link.toUpperCase()}</Link></motion.li> )
     
     return (
         <nav className="navbar navbar-expand-sm fixed-top">
