@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll';
 import Github from '../../static/github.png'
 import Twitter from '../../static/twitter.png'
 import Linkedin from '../../static/linkedin.png'
@@ -9,24 +8,28 @@ const Contact = () => {
     const imgLinks = [
       {
         link: 'https://twitter.com/thesergiod',
-        img: Twitter
+        img: Twitter,
+        alt: 'Twitter'
       },
       {
         link: 'https://www.linkedin.com/in/sergio-diaz-4a60711a4/',
-        img: Linkedin
+        img: Linkedin,
+        alt: 'Linkedin'
       },
       {
         link: 'https://mail.google.com/mail/?view=cm&fs=1&to=sergio.diazg92@gmail.com',
-        img: Gmail
+        img: Gmail,
+        alt: 'Gmail'
       },
       {
         link: 'https://github.com/serdg0',
-        img: Github
+        img: Github,
+        alt: 'Github'
       },
     ];
     const linkBoard = imgLinks.map(icon => {
-      const { link, img } = icon;
-      return <a href={link} className="pr-4"><img src={img} /></a>
+      const { link, img, alt } = icon;
+      return <a href={link} className="pr-4"><img src={img} alt={alt} /></a>
     })
     return(
       <footer id='contact'>

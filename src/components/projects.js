@@ -39,8 +39,8 @@ const Projects = () => {
                 <h5 className="card-title main-color">{name}</h5>
                 <p className="card-text text-color">{description}</p>
                 <p className="card-text"><Tags build={build} /></p>
-                <a href={url} target="_blank" className="mr-2"><img src={Live} /></a>
-                <a href={repo} target="_blank"><img src={Github} /></a>
+                <a href={url} target="_blank" rel="noopener noreferrer" className="mr-2"><img src={Live} alt="" /></a>
+                <a href={repo} target="_blank" rel="noopener noreferrer"><img src={Github} alt="" /></a>
               </div>
             </div>
           </div>
