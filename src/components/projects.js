@@ -6,6 +6,7 @@ import Github from '../../static/github.png';
 import Live from '../../static/icons8-youtube-live-48.png';
 import BackgroundImageSection from './backgrounds';
 import { motion } from 'framer-motion';
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 const Projects = () => {
     const data = useStaticQuery(graphql`
@@ -48,8 +49,8 @@ const Projects = () => {
                 <h5 className="card-title main-color">{name}</h5>
                 <p className="card-text text-color">{description}</p>
                 <div className="card-text"><Tags build={build} /></div>
-                <a href={url} target="_blank" rel="noopener noreferrer" className="mr-2"><motion.img whileTap={tap} whileHover={hover} src={Live} alt="" /></a>
-                <a href={repo} target="_blank" rel="noopener noreferrer"><motion.img whileTap={tap} whileHover={hover} src={Github} alt="" /></a>
+                <OutboundLink href={url} target="_blank" rel="noopener noreferrer" className="mr-2"><motion.img whileTap={tap} whileHover={hover} src={Live} alt="" /></OutboundLink>
+                <OutboundLink href={repo} target="_blank" rel="noopener noreferrer"><motion.img whileTap={tap} whileHover={hover} src={Github} alt="" /></OutboundLink>
               </div>
             </div>
           </div>

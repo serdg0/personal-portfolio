@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `Sergio Diaz`,
     description: `Hi, my name is Sergio, and I'm a web developer from a remote web development program. Currently looking for opportunities, to prove my skills and develop my potential.`,
-    author: `@gatsbyjs`,
+    author: `Sergio Diaz`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -28,6 +28,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-160612754-1",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
