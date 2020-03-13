@@ -28,8 +28,8 @@ const Projects = () => {
   const cards = edges.map(node => {
     const { node: { name, url, id, description, repo, build, imgName } } = node;
     return (
-      <Fade bottom>
-        <div key={id} className="card mb-4 project h-50">
+      <Fade key={id} bottom>
+        <div className="card mb-4 project h-50">
           <div className="row no-gutters">
             <div className="col-md-4">
               <BackgroundImageSection imgName={imgName} />
@@ -38,7 +38,7 @@ const Projects = () => {
               <div className="card-body">
                 <h5 className="card-title main-color">{name}</h5>
                 <p className="card-text text-color">{description}</p>
-                <p className="card-text"><Tags build={build} /></p>
+                <div className="card-text"><Tags build={build} /></div>
                 <a href={url} target="_blank" rel="noopener noreferrer" className="mr-2"><img src={Live} alt="" /></a>
                 <a href={repo} target="_blank" rel="noopener noreferrer"><img src={Github} alt="" /></a>
               </div>

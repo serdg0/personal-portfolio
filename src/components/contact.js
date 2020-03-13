@@ -29,7 +29,7 @@ const Contact = () => {
     ];
     const linkBoard = imgLinks.map(icon => {
       const { link, img, alt } = icon;
-      return <a href={link} className="pr-4"><img src={img} alt={alt} /></a>
+      return <a key={alt} href={link} className="pr-4"><img src={img} alt={alt} /></a>
     })
     return(
       <footer id='contact'>

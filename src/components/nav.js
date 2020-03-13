@@ -11,7 +11,7 @@ const Nav = () => {
     const tap = {
         scale: '0.9'
     }
-    const navLinks = links.map(link => <motion.li className='nav-item text-color' whileTap={tap} whileHover={aniNav}><Link to={link} spy={true} smooth={true} duration={1500} className='nav-link'>{link.toUpperCase()}</Link></motion.li> )
+    const navLinks = links.map(link => <motion.li key={link} className='nav-item text-color' whileTap={tap} whileHover={aniNav}><Link to={link} spy={true} smooth={true} duration={1500} className='nav-link'>{link.toUpperCase()}</Link></motion.li> )
     
     return (
         <nav className="navbar navbar-expand-sm fixed-top">
