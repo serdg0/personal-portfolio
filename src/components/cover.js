@@ -5,7 +5,7 @@ import Media from 'react-media';
 
 const Cover = ({ children, title, description }) => {
     const fontSize = {
-        fontSize: '4rem',
+        fontSize: '5rem',
     }
 
     return (
