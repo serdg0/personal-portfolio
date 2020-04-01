@@ -4,6 +4,7 @@ module.exports = {
     title: `Sergio Diaz`,
     description: `Hi, my name is Sergio, and I'm a web developer from a remote web development program. Currently looking for opportunities, to prove my skills and develop my potential.`,
     author: `Sergio Diaz`,
+    siteUrl: `https://admiring-pare-6a2a41.netlify.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -23,7 +24,6 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
-        theme_color: `#663399`,
         display: `minimal-ui`,
       },
     },

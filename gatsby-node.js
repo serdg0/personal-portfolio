@@ -6,7 +6,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             url: 'https://clock-cms.herokuapp.com/',
             repo: 'https://github.com/serdg0/timelogger',
             build: ['Javascript', 'Ruby', 'npm', 'React', 'Redux', 'Ruby on Rails', 'Heroku'],
-            description: 'TimeLogger was my final project in the curriculum. Its fed by an api made in Ruby on Rails. I took the chance to build using other libraries like lodash and react-router',
+            description: 'TimeLogger was my final project in the curriculum. Its fed by an API made in Ruby on Rails. I took the chance to use libraries like lodash and react-router.',
             imgName: 'timelogger.png',
         },
         {
@@ -14,7 +14,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             url: 'https://bookstore-reactredux.herokuapp.com/',
             repo: 'https://github.com/serdg0/bookstore',
             build: ['Javascript', 'npm', 'React', 'Redux', 'Heroku'],
-            description: 'In this projects I had the chance to learn Redux for the first time. Also based my the UI on a given design',
+            description: 'In this project, I had the chance to learn Redux for the first time. Also, the UI is based on a given design.',
             imgName: 'bookstore.png',
         },
         {
@@ -22,7 +22,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             url: 'https://react-calculator-serdg.herokuapp.com/',
             repo: 'https://github.com/serdg0/React-Calculator',
             build: ['Javascript', 'npm', 'React', 'Heroku'],
-            description: 'A calculator build using React components',
+            description: 'A calculator built using React components.',
             imgName: 'calculator.png',
         },
         {
@@ -30,7 +30,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             url: 'https://serdg0.github.io/battleship/',
             repo: 'https://github.com/serdg0/battleship',
             build: ['Javascript', 'Webpack', 'Pair Programming'],
-            description: "A browser-based battleship game built with Javascript, applying it's best practices",
+            description: "A browser-based battleship game built with Javascript, applying it's best practices.",
             imgName: 'battleship.png',
         },
         {
@@ -38,7 +38,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             url: 'https://eapenzacharias.github.io/TicTacToe-JS/',
             repo: 'https://github.com/eapenzacharias/TicTacToe-JS',
             build: ['Javascript', 'Webpack', 'Pair Programming'],
-            description: 'A browser-based tic-tac-toe game',
+            description: 'A browser-based tic-tac-toe game.',
             imgName: 'tictactoe.png',
         },
         {
@@ -46,7 +46,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             url: 'https://socialbook2019.herokuapp.com/',
             repo: 'https://github.com/MephistoDevelop/SocialBook',
             build: ['Ruby', 'Ruby on Rails', 'Pair Programming', 'Heroku'],
-            description: 'A social platform based on facebook, using ruby on rails. Remember to confirm your email!',
+            description: 'A social platform based on Facebook, built with Ruby on Rails. Remember to confirm your email!',
             imgName: 'socialbook.png',
         },
         {
@@ -54,7 +54,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             url: 'https://serdg0.github.io/Newsweek-design/',
             repo: 'https://github.com/serdg0/Newsweek-design',
             build: ['HTML', 'CSS', 'Bootstrap'],
-            description: 'A project based on the official newsweek layout design using bootstrap',
+            description: 'A project based on the official Newsweek layout design and built using Bootstrap.',
             imgName: 'newsweek.png',
         },
     ]
