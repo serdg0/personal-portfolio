@@ -7,6 +7,7 @@ import Cover from './cover';
 import Contact from './contact';
 import "./layout.css";
 import SubHeader from "./subheader";
+import Sidebar from './sidebar';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,14 +25,17 @@ const Layout = ({ children }) => {
   return (
     <>
       <Nav />
+      <Sidebar />
       <div className="container">
         <main title="cover">
           <Cover children={children} title={title} description={description} />
           <SubHeader title="portfolio" />
           <Projects />
         </main>
-        <SubHeader title="contact" />
-        <Contact />
+        <footer>
+          <SubHeader title="contact" />
+          <Contact />
+        </footer>
       </div>
     </>
   )

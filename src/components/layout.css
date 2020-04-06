@@ -660,3 +660,19 @@ pre tt:after {
   background-color: #05386B !important;
   color: #EDF5E1 !important;
 }
+
+.sidebar {
+  width: 80px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 40px;
+  padding-left: 5px;
+}
+
+.linke:hover {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+  background: #EDF5E1;
+}
