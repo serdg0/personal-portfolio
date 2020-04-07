@@ -31,7 +31,7 @@ const Sidebar = () => {
 
       const conLinks = imgLinks.map(linke => {
         const { link, img, alt } = linke;
-        return <OutboundLink href={link}><img className='linke rounded' src={img} alt={alt} /></OutboundLink>
+        return <OutboundLink href={link}><img className='linke rounded pb-3' src={img} alt={alt} /></OutboundLink>
       })
 
     return (

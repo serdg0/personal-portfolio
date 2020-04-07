@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 
 const Nav = () => {
-    const links = ['portfolio', 'contact', 'up'];
+    const links = ['portfolio', 'contact'];
     const underline = {
         textDecoration: 'underline'
     }

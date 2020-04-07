@@ -8,6 +8,7 @@ import Contact from './contact';
 import "./layout.scss";
 import SubHeader from "./subheader";
 import Sidebar from './sidebar';
+import Arrow from './upArrow';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,6 +27,7 @@ const Layout = ({ children }) => {
     <>
       <Nav />
       <Sidebar />
+      <Arrow />
       <div className="container">
         <main title="cover">
           <Cover children={children} title={title} description={description} />
