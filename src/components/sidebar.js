@@ -4,6 +4,8 @@ import Github from '../../static/github.png'
 import Twitter from '../../static/twitter.png'
 import Linkedin from '../../static/linkedin.png'
 import Gmail from '../../static/gmail.png'
+import { useScrollData } from "scroll-data-hook";
+import {useSpring, animated} from 'react-spring';
 
 const Sidebar = () => {
     const imgLinks = [
@@ -28,16 +30,17 @@ const Sidebar = () => {
           alt: 'Github'
         },
       ];
-
+      const { position: { y } } = useScrollData();
+      const appear = y > 50;
+      const props = useSpring({opacity: appear ? 1 : 0})
       const conLinks = imgLinks.map(linke => {
         const { link, img, alt } = linke;
         return <OutboundLink href={link}><img className='linke rounded pb-3' src={img} alt={alt} /></OutboundLink>
       })
-
     return (
-      <div className='sidebar d-flex flex-column'>
+      <animated.div style={props} className='sidebar d-flex flex-column'>
           {conLinks}
-      </div>
+      </animated.div>
     )
 }
 

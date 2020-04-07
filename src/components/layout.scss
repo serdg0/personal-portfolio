@@ -48,6 +48,7 @@ body {
   right: 0;
   padding-bottom: 1.5rem;
   padding-right: 1.5rem;
+  z-index: 2;
 }
 
 .project {
@@ -116,7 +117,7 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  .sidebar {
+  .sidebar, .arrow {
     visibility: hidden;
     display: none;
   }
