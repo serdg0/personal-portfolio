@@ -5,7 +5,7 @@ import Projects from './projects'
 import Nav from './nav'
 import Cover from './cover';
 import Contact from './contact';
-import "./layout.css";
+import "./layout.scss";
 import SubHeader from "./subheader";
 import Sidebar from './sidebar';
 

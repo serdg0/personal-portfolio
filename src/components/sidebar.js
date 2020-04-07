@@ -31,13 +31,13 @@ const Sidebar = () => {
 
       const conLinks = imgLinks.map(linke => {
         const { link, img, alt } = linke;
-        return <OutboundLink href={link} ><img className='linke' src={img} alt={alt} /></OutboundLink>
+        return <OutboundLink href={link}><img className='linke rounded' src={img} alt={alt} /></OutboundLink>
       })
 
     return (
-        <div className='sidebar'>
-            {conLinks}
-        </div>
+      <div className='sidebar d-flex flex-column'>
+          {conLinks}
+      </div>
     )
 }
 

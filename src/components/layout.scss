@@ -1,0 +1,145 @@
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-image: linear-gradient(to bottom, #5CDB95);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: inherit;
+}
+*:before {
+  box-sizing: inherit;
+}
+*:after {
+  box-sizing: inherit;
+}
+body {
+  color: hsla(0, 0%, 0%, 0.8);
+  font-family: georgia, serif;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+@font-face {
+  font-family: 'pixel';
+  src: url('../../static/OverpassMono-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'texto';
+  src: url('../../static/Roboto-Medium.ttf');
+}
+
+.project {
+  background-color: #379683 !important;
+}
+
+.cover-title {
+  font-family: pixel !important;
+  color: #EDF5E1;
+  display: block;
+  font-size: 69px;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  padding-top: 10rem;
+}
+
+.main-color {
+  font-family: pixel !important;
+  color: #EDF5E1;
+}
+
+.subheader {
+  font-family: pixel;
+}
+
+.text-color {
+  font-family: texto;
+  color: #05386B;
+}
+
+.tag {
+  background-color: #05386B !important;
+  color: #EDF5E1 !important;
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 40px;
+  padding-left: 5px;
+}
+
+.Typist .Cursor {
+  display: inline-block;
+
+  &--blinking {
+    opacity: 1;
+    animation: blink 1s linear infinite;
+    @keyframes blink {
+      0% { opacity:1; }
+      50% { opacity:0; }
+      100% { opacity:1; }
+    }
+  }
+}
+
+.linke:hover {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+  background: #EDF5E1;
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 540px){
+  .cover-title {
+    font-size: 32px;
+  }
+
+  .text-color {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .cover-title {
+    font-size: 80px;
+  }
+
+  .text-color {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (min-width: 540px) and (max-width: 768px) {
+  .cover-title {
+    font-size: 44px;
+  }
+
+  .text-color {
+    font-size: 16px;
+  }
+}
