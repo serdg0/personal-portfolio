@@ -3,7 +3,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
     const projects = [
         {
             name: 'TimeLogger',
-            url: 'https://timelogger.netlify.com/signin',
+            url: 'https://timelogger.netlify.com',
             repo: 'https://github.com/serdg0/timelogger',
             build: ['Javascript', 'Ruby', 'npm', 'React', 'Redux', 'Ruby on Rails', 'Heroku'],
             description: 'TimeLogger was my final project in the curriculum. Its fed by an API made in Ruby on Rails. I took the chance to use libraries like lodash and react-router.',
