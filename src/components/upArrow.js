@@ -12,7 +12,7 @@ const Arrow = () => {
     return (
         <animated.div style={props} className='arrow'>
             <Link to='up' spy={true} smooth={true} duration={1500}>
-                <img src={upwardArrow} />
+                <img src={upwardArrow} alt='Go Up' />
             </Link>
         </animated.div>
     )

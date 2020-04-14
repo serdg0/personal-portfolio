@@ -4,7 +4,8 @@ module.exports = {
     title: `Sergio Diaz`,
     description: `Hi, my name is Sergio, and I'm a web developer from a remote web development program. Currently looking for opportunities, to prove my skills and develop my potential.`,
     author: `Sergio Diaz`,
-    siteUrl: `https://admiring-pare-6a2a41.netlify.com`,
+    siteUrl: `https://sergiodev.netlify.com`,
+    image: `src/images/icons/portfolio.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
