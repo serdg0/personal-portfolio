@@ -10,7 +10,7 @@ import {useSpring, animated} from 'react-spring';
 const Sidebar = () => {
     const imgLinks = [
         {
-          link: 'https://twitter.com/thesergiod',
+          link: 'https://twitter.com/thesergiodev',
           img: Twitter,
           alt: 'Twitter'
         },
